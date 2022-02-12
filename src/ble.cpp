@@ -65,6 +65,15 @@ private:
         {
             updateThresholdFromString(value);
         }
+
+        // Notify
+        pCharacteristic->setValue(value);
+        pCharacteristic->notify();
+    }
+
+    void onNotify(BLECharacteristic *pCharacteristic)
+    {
+        Serial.println("onNotify");
     }
 };
 
