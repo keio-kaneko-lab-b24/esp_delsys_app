@@ -49,8 +49,8 @@ void TaskMaincode(void *pvParameters)
 {
   for (;;)
   {
-    // 10Hz
-    if ((micros() - last_process_micros) < 100 * 1000)
+    // 50Hz
+    if ((micros() - last_process_micros) < 20 * 1000)
     {
       continue;
     }
